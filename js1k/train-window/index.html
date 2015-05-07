@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Procedurally Generation Landscape</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  
+<canvas id="c" width="750" height="480" style=""></canvas>
+
+
+<script>
+  
+  /**
+   * Canvas Methods
+   *
+   * Provide AudioContext & requesAnimationFrame shims, define canvas
+   * @type {[type]}
+   */
+  var a = document.getElementsByTagName('canvas')[0];
+  var b = document.body;
+  var d = function(e){ return function(){ e.parentNode.removeChild(e); }; }(a);
+  // unprefix some popular vendor prefixed things (but stick to their original name)
+  var AudioContext =
+    window.AudioContext ||
+    window.webkitAudioContext;
+  var requestAnimationFrame =
+    window.requestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    function(f){ setTimeout(f, 1000/30); };
+
+  
+  document.body.clientWidth;
+
+   // (function (a){
+   //    var mw = Infinity;
+   //    var mh = Infinity;
+   //    var min = Math.min;
+
+   //    return function (w,h){
+   //      if (arguments.length === 2) {
+   //        mw = w;
+   //        mh = h;
+   //      }
+   //      a.style.width = (a.width = min(mw, innerWidth)) + 'px';
+   //      a.style.height = (a.height = min(mh, innerHeight)) + 'px';
+   //    };
+   //  }(a))();
+
+
+    var c = a.getContext('2d');
+      
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
